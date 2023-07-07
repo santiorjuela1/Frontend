@@ -7,12 +7,16 @@
   </p>
 </div>
 
+<p>PROPERTY BINDING:</p>
+<img [src]="imagenUrl" alt="">
 
-  <p>PROPERTY BENDING:</p>
-  <img [src]="imagenUrl" alt="">
+<p>STYLE BINDING</p>
+<button [style.background-color]="backgroundColor" [style.color]="textColor" [disabled]="isDisabled">
+click me!!
+</button>
 
-  <button [disabled]="activedButton" (click)="desactivarBoton(true)">
-    PROPERTY BINDING
-  </button>
+<p>EVENT BINDING</p>
+<button (mousedown)="mostrarEventos($event)">EVENT BINDING</button>
 
-<p>HOLAAA</p>
+<p>Event filtering: </p>
+<button (keyup.enter)="mostrarEventos($event)"></button>

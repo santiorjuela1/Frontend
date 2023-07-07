@@ -33,12 +33,17 @@ export class AppComponent {
 
   public bool : boolean = true;
 
-
   public nombres: string[] = ['pedro', 'juan', 'lucas'];
 
   public nombres2 : string[] = ['matias', 'felipe', 'santiago'];
 
   public imagenUrl = 'https://picsum.photos/200/300';
+
+  public backgroundColor : string = 'red';
+
+  public textColor : string = 'black';
+
+  public isDisabled : boolean =  false;
 
 
   public activedButton: boolean = false;
@@ -57,6 +62,10 @@ export class AppComponent {
 
   public concat(list: string[]): string[]{
     return this.nombres.concat(list);
+  }
+
+  public mostrarEventos(event : any) : void{
+    console.log(event);
   }
 
 
