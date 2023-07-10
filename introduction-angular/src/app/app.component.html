@@ -1,22 +1,2 @@
 
 <router-outlet></router-outlet>
-<div>
-  <p>String interpolation: </p>
-  <p *ngFor="let libro of listaLibros">
-    {{ libro.autor }} -- {{libro.idLibro}} -- {{ libro.titulo }}
-  </p>
-</div>
-
-<p>PROPERTY BINDING:</p>
-<img [src]="imagenUrl" alt="">
-
-<p>STYLE BINDING</p>
-<button [style.background-color]="backgroundColor" [style.color]="textColor" [disabled]="isDisabled">
-click me!!
-</button>
-
-<p>EVENT BINDING</p>
-<button (mousedown)="mostrarEventos($event)">EVENT BINDING</button>
-
-<p>Event filtering: </p>
-<button (keyup.enter)="mostrarEventos($event)"></button>
