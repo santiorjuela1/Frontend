@@ -4,6 +4,36 @@
         (enviarPapa)="recibirMensage($event)"
 ></app-hijo>
 
-
 <p>{{mensajePadre}}
 </p>
+
+<section>
+    <p>DIRECTIVA NGMODEL</p>
+
+    <mat-form-field class="example-form-field">
+        <mat-label>INGRESE ID:</mat-label>
+        <input matInput type="text" [(ngModel)]="libro.idLibro">
+        <button *ngIf="libro.idLibro" matSuffix mat-icon-button aria-label="Clear" (click)="libro.idLibro=undefined">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+        <mat-label>INGRESE AUTOR:</mat-label>
+        <input matInput type="text" [(ngModel)]="libro.autor">
+        <button *ngIf="libro.autor" matSuffix mat-icon-button aria-label="Clear" (click)="libro.autor=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+    <mat-form-field class="example-form-field">
+        <mat-label>INGRESE TITULO:</mat-label>
+        <input matInput type="text" [(ngModel)]="libro.titulo">
+        <button *ngIf="libro.titulo" matSuffix mat-icon-button aria-label="Clear" (click)="libro.titulo=''">
+          <mat-icon>close</mat-icon>
+        </button>
+      </mat-form-field>
+
+    <button mat-stroked-button color="primary" class="mostrarLibro" (click)="mostrarLibro()">MOSTRAR LIBRO</button>
+
+</section>

@@ -1,0 +1,12 @@
+.mostrarLibro{
+    margin-left: 20px;
+    margin-top: 15px;
+    display: flex;
+
+}
+
+.example-form-field{
+    margin-left: 20px;
+    display: flex;
+    width: 300px;
+}
