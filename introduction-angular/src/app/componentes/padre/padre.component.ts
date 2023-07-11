@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Libro } from 'src/models/Libro';
 
 @Component({
@@ -7,6 +8,14 @@ import { Libro } from 'src/models/Libro';
   styleUrls: ['./padre.component.css']
 })
 export class PadreComponent {
+
+  public formLibro = new FormGroup({
+    idLibro : new FormControl(null),
+    autor : new FormControl('', [Validators.required, Validators.minLength(5)]),
+    titulo : new FormControl('', [Validators.required]),
+
+  });
+
   public mensajeParaEnviar : string = "Soy el mensaje para enviar";
 
   public mensajePadre! : string;
@@ -22,5 +31,14 @@ export class PadreComponent {
 
   public mostrarLibro(){
     console.log(this.libro);
+  }
+
+  enviarLibro(){
+    let libro = {
+      idLibro : this.formLibro.get('idLibro')?.value,
+      autor : this.formLibro.get('autor')?.value,
+      titulo : this.formLibro.get('titulo')?.value,
+    }
+    console.log(libro);
   }
 }

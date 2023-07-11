@@ -37,3 +37,18 @@
     <button mat-stroked-button color="primary" class="mostrarLibro" (click)="mostrarLibro()">MOSTRAR LIBRO</button>
 
 </section>
+
+<section class="reactive_form">
+<h2>REACTIVE FORM</h2>
+<form [formGroup]="formLibro" (ngSubmit)="enviarLibro()">
+<span>id libro</span>
+<input type="number" formControlName="idLibro">
+<span>Autor</span>
+<input type="text" formControlName="autor"> 
+<span>Titulo</span>
+<input type="text" formControlName="titulo">
+<button type="submit" [disabled]="formLibro.invalid">Enviar libro</button>
+</form>
+
+
+</section>
